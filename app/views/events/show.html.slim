@@ -1,0 +1,25 @@
+h1 スケジュール詳細
+.nav.justify-content-end
+  = link_to '一覧', events_path, class: 'nav-link btn btn-outline-secondary mr-3'
+
+table.table.table-hover
+  tbody
+    tr
+      th= Event.human_attribute_name(:id)
+      td= @event.id
+    
+    tr
+      th= Event.human_attribute_name(:name)
+      td= @event.name
+    tr
+      th= Event.human_attribute_name(:description)
+      td= auto_link(simple_format(h(@event.description), {}, sanitize: false, wrapper_tag: "div"))
+    tr
+      th= Event.human_attribute_name(:start)
+      td= @event.start
+    tr
+      th= Event.human_attribute_name(:end)
+      td= @event.end
+    
+= link_to '編集', edit_event_path(@event), class: 'btn btn-sm btn-outline-primary mr-3'
+= link_to '削除', @event, method: :delete, data: { confirm: "タイトル「#{@event.name}」を削除します。よろしいですか？" }, class: 'btn btn-sm btn-danger mr-1'

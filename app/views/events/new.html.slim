@@ -1,0 +1,5 @@
+h1 新規スケジュール
+.nav.justify-content-end
+  = link_to '一覧', events_path, class: 'nav-link btn btn-outline-secondary mr-3'
+
+= render partial: 'form', locals: { event: @event }

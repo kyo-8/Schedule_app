@@ -1,0 +1,446 @@
+# Logfile created on 2019-12-30 20:49:08 +0900 by logger.rb/61378
+2019-12-30 20:49:08 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-30 20:49:08 +0900
+2019-12-30 20:49:08 +0900 :FATAL:   
+2019-12-30 20:49:08 +0900 :FATAL: ActiveRecord::NoDatabaseError (FATAL:  database "schedule_development" does not exist
+):
+2019-12-30 20:49:08 +0900 :FATAL:   
+2019-12-30 20:49:08 +0900 :FATAL: activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:28:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (156.1ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (137.1ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-30 20:49:08 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (311.6ms)
+2019-12-30 20:50:54 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-30 20:50:54 +0900
+2019-12-30 20:50:54 +0900 :FATAL:   
+2019-12-30 20:50:54 +0900 :FATAL: ActiveRecord::NoDatabaseError (FATAL:  database "schedule_development" does not exist
+):
+2019-12-30 20:50:54 +0900 :FATAL:   
+2019-12-30 20:50:54 +0900 :FATAL: activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:28:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-30 20:50:54 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-30 20:50:54 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-30 20:50:54 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+2019-12-30 20:50:54 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.6ms)
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-30 20:50:54 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-30 20:50:54 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-30 20:50:54 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-30 20:50:55 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-30 20:50:55 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+2019-12-30 20:50:55 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-30 20:50:55 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+2019-12-30 20:50:55 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (129.8ms)
+2019-12-30 20:50:55 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-30 20:50:55 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+2019-12-30 20:50:55 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-30 20:50:55 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-30 20:50:55 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (300.2ms)
+2019-12-30 20:51:03 +0900 :INFO: Started GET "/" for ::1 at 2019-12-30 20:51:03 +0900
+2019-12-30 20:51:03 +0900 :FATAL:   
+2019-12-30 20:51:03 +0900 :FATAL: ActiveRecord::NoDatabaseError (FATAL:  database "schedule_development" does not exist
+):
+2019-12-30 20:51:03 +0900 :FATAL:   
+2019-12-30 20:51:03 +0900 :FATAL: activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:28:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+2019-12-30 20:51:03 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-30 20:51:03 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-30 20:51:03 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.2ms)
+2019-12-30 20:51:03 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-30 20:51:03 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+2019-12-30 20:51:03 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-30 20:51:03 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+2019-12-30 20:51:03 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (147.7ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (128.5ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-30 20:51:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (287.7ms)
+2019-12-30 20:51:06 +0900 :INFO: Started GET "/" for ::1 at 2019-12-30 20:51:06 +0900
+2019-12-30 20:51:07 +0900 :FATAL:   
+2019-12-30 20:51:07 +0900 :FATAL: ActiveRecord::NoDatabaseError (FATAL:  database "schedule_development" does not exist
+):
+2019-12-30 20:51:07 +0900 :FATAL:   
+2019-12-30 20:51:07 +0900 :FATAL: activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:28:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (139.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (136.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-30 20:51:07 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (304.6ms)
+2019-12-30 20:58:05 +0900 :INFO: Started GET "/" for ::1 at 2019-12-30 20:58:05 +0900
+2019-12-30 20:58:05 +0900 :DEBUG:   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2019-12-30 20:58:05 +0900 :DEBUG:   ↳ /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+2019-12-30 20:58:05 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-30 20:58:05 +0900 :INFO: Redirected to http://localhost:3000/login
+2019-12-30 20:58:05 +0900 :INFO: Filter chain halted as :login_required rendered or redirected
+2019-12-30 20:58:05 +0900 :INFO: Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+2019-12-30 20:58:05 +0900 :INFO: Started GET "/login" for ::1 at 2019-12-30 20:58:05 +0900
+2019-12-30 20:58:05 +0900 :INFO: Processing by SessionsController#new as HTML
+2019-12-30 20:58:05 +0900 :INFO:   Rendering sessions/new.html.slim within layouts/application
+2019-12-30 20:58:05 +0900 :INFO:   Rendered sessions/new.html.slim within layouts/application (23.9ms)
+2019-12-30 20:58:06 +0900 :INFO: Completed 200 OK in 637ms (Views: 633.7ms | ActiveRecord: 0.0ms)
+
+
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/fullcalendar.self-a7046b48d54ea3c20809b49fbe6f7c6de9789cf86a9f3c72bfa79ef5ba81b1a9.css?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/application.self-b50ac3abb47181fab8a7d50056273793d84889a87cb1d4872856fd5434db1a05.css?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/moment.self-dbfdfe43590c611f0c0daa853cd06098b822a96263c92920d70a8bc7f884e59a.js?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/fullcalendar.self-e9ae1b2c551f2f852ffbb704ecc1e434ee9bbc2cda72ea67fa3631cdace57650.js?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/rails-ujs.self-43e81c501e7e36871a34b4b950451cc7cb047af4e846ec742539e64724582452.js?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:06 +0900 :INFO: Started GET "/assets/activestorage.self-1ed4604ac2170045f1ffca4edb81a75246661555e4f9cf682bb8a21825e32e1c.js?body=1" for ::1 at 2019-12-30 20:58:06 +0900
+2019-12-30 20:58:18 +0900 :INFO: Started POST "/login" for ::1 at 2019-12-30 20:58:18 +0900
+2019-12-30 20:58:18 +0900 :INFO: Processing by SessionsController#create as HTML
+2019-12-30 20:58:18 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+JEvEOVyjSNbh9N+IBOR1tMu5rZUD/WgoG62PyEBRZnyDZ4kxu7Z7ZoYsRWuep+FFoTmBbqdQLK6ylwthp4z6Q==", "session"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+2019-12-30 20:58:18 +0900 :DEBUG:   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+2019-12-30 20:58:18 +0900 :DEBUG:   ↳ app/controllers/sessions_controller.rb:7
+2019-12-30 20:58:18 +0900 :INFO: Redirected to http://localhost:3000/
+2019-12-30 20:58:18 +0900 :INFO: Completed 302 Found in 242ms (ActiveRecord: 16.3ms)
+
+
+2019-12-30 20:58:18 +0900 :INFO: Started GET "/" for ::1 at 2019-12-30 20:58:18 +0900
+2019-12-30 20:58:18 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-30 20:58:18 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 20:58:18 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 20:58:18 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-30 20:58:18 +0900 :DEBUG:   [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 20:58:18 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-30 20:58:18 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (44.4ms)
+2019-12-30 20:58:19 +0900 :INFO: Completed 200 OK in 127ms (Views: 100.4ms | ActiveRecord: 4.2ms)
+
+
+2019-12-30 20:58:19 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577707099066" for ::1 at 2019-12-30 20:58:19 +0900
+2019-12-30 20:58:19 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 20:58:19 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577707099066"}
+2019-12-30 20:58:19 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 20:58:19 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 20:58:19 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 20:58:19 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 20:58:19 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-30 21:00:10 +0900 :INFO: Started GET "/events.json?start=2019-01-01&end=2020-01-01&_=1577707099067" for ::1 at 2019-12-30 21:00:10 +0900
+2019-12-30 21:00:10 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:10 +0900 :INFO:   Parameters: {"start"=>"2019-01-01", "end"=>"2020-01-01", "_"=>"1577707099067"}
+2019-12-30 21:00:10 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:10 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:10 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:10 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:10 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+2019-12-30 21:00:16 +0900 :INFO: Started GET "/events.json?start=2020-01-01&end=2021-01-01&_=1577707099068" for ::1 at 2019-12-30 21:00:16 +0900
+2019-12-30 21:00:16 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:16 +0900 :INFO:   Parameters: {"start"=>"2020-01-01", "end"=>"2021-01-01", "_"=>"1577707099068"}
+2019-12-30 21:00:16 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:16 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:16 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:16 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+2019-12-30 21:00:18 +0900 :INFO: Started GET "/events.json?start=2021-01-01&end=2022-01-01&_=1577707099069" for ::1 at 2019-12-30 21:00:18 +0900
+2019-12-30 21:00:18 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:18 +0900 :INFO:   Parameters: {"start"=>"2021-01-01", "end"=>"2022-01-01", "_"=>"1577707099069"}
+2019-12-30 21:00:18 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:18 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:18 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:18 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:18 +0900 :INFO: Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+2019-12-30 21:00:20 +0900 :INFO: Started GET "/events.json?start=2020-01-01&end=2021-01-01&_=1577707099070" for ::1 at 2019-12-30 21:00:20 +0900
+2019-12-30 21:00:20 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:20 +0900 :INFO:   Parameters: {"start"=>"2020-01-01", "end"=>"2021-01-01", "_"=>"1577707099070"}
+2019-12-30 21:00:20 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:20 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:20 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:20 +0900 :INFO: Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-30 21:00:20 +0900 :INFO: Started GET "/events.json?start=2019-01-01&end=2020-01-01&_=1577707099071" for ::1 at 2019-12-30 21:00:20 +0900
+2019-12-30 21:00:20 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:20 +0900 :INFO:   Parameters: {"start"=>"2019-01-01", "end"=>"2020-01-01", "_"=>"1577707099071"}
+2019-12-30 21:00:20 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:20 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:20 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:20 +0900 :INFO: Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+2019-12-30 21:00:21 +0900 :INFO: Started GET "/events.json?start=2018-01-01&end=2019-01-01&_=1577707099072" for ::1 at 2019-12-30 21:00:21 +0900
+2019-12-30 21:00:21 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:21 +0900 :INFO:   Parameters: {"start"=>"2018-01-01", "end"=>"2019-01-01", "_"=>"1577707099072"}
+2019-12-30 21:00:21 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:21 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:21 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:21 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:21 +0900 :INFO: Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+2019-12-30 21:00:23 +0900 :INFO: Started GET "/events.json?start=2019-01-01&end=2020-01-01&_=1577707099073" for ::1 at 2019-12-30 21:00:23 +0900
+2019-12-30 21:00:23 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:23 +0900 :INFO:   Parameters: {"start"=>"2019-01-01", "end"=>"2020-01-01", "_"=>"1577707099073"}
+2019-12-30 21:00:23 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:23 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:23 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:23 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:23 +0900 :INFO: Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+2019-12-30 21:00:24 +0900 :INFO: Started GET "/events.json?start=2020-01-01&end=2021-01-01&_=1577707099074" for ::1 at 2019-12-30 21:00:24 +0900
+2019-12-30 21:00:24 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:24 +0900 :INFO:   Parameters: {"start"=>"2020-01-01", "end"=>"2021-01-01", "_"=>"1577707099074"}
+2019-12-30 21:00:24 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:24 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:24 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:24 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:24 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+2019-12-30 21:00:26 +0900 :INFO: Started GET "/events.json?start=2019-01-01&end=2020-01-01&_=1577707099075" for ::1 at 2019-12-30 21:00:26 +0900
+2019-12-30 21:00:26 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:26 +0900 :INFO:   Parameters: {"start"=>"2019-01-01", "end"=>"2020-01-01", "_"=>"1577707099075"}
+2019-12-30 21:00:26 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:26 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:26 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:26 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:26 +0900 :INFO: Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+2019-12-30 21:00:27 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-30 21:00:27 +0900
+2019-12-30 21:00:27 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-30 21:00:27 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:27 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:27 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-30 21:00:27 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:27 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-30 21:00:27 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.7ms)
+2019-12-30 21:00:27 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+2019-12-30 21:00:27 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577707099076" for ::1 at 2019-12-30 21:00:27 +0900
+2019-12-30 21:00:27 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-30 21:00:27 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577707099076"}
+2019-12-30 21:00:27 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-30 21:00:27 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-30 21:00:27 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-30 21:00:27 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-30 21:00:27 +0900 :INFO: Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+

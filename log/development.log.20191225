@@ -1,0 +1,1555 @@
+# Logfile created on 2019-12-25 20:43:52 +0900 by logger.rb/61378
+2019-12-25 20:43:52 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:43:52 +0900
+2019-12-25 20:43:52 +0900 :DEBUG:   [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2019-12-25 20:43:52 +0900 :DEBUG:   ↳ /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+2019-12-25 20:43:52 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:43:52 +0900 :INFO: Redirected to http://localhost:3000/login
+2019-12-25 20:43:52 +0900 :INFO: Filter chain halted as :login_required rendered or redirected
+2019-12-25 20:43:52 +0900 :INFO: Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+2019-12-25 20:43:53 +0900 :INFO: Started GET "/login" for ::1 at 2019-12-25 20:43:53 +0900
+2019-12-25 20:43:53 +0900 :INFO: Processing by SessionsController#new as HTML
+2019-12-25 20:43:53 +0900 :INFO:   Rendering sessions/new.html.slim within layouts/application
+2019-12-25 20:43:53 +0900 :INFO:   Rendered sessions/new.html.slim within layouts/application (29.6ms)
+2019-12-25 20:43:54 +0900 :INFO: Completed 200 OK in 1976ms (Views: 1972.6ms | ActiveRecord: 0.0ms)
+
+
+2019-12-25 20:43:55 +0900 :INFO: Started GET "/assets/application.self-b50ac3abb47181fab8a7d50056273793d84889a87cb1d4872856fd5434db1a05.css?body=1" for ::1 at 2019-12-25 20:43:55 +0900
+2019-12-25 20:43:55 +0900 :INFO: Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-12-25 20:43:55 +0900
+2019-12-25 20:43:55 +0900 :INFO: Started GET "/assets/fullcalendar.self-e9ae1b2c551f2f852ffbb704ecc1e434ee9bbc2cda72ea67fa3631cdace57650.js?body=1" for ::1 at 2019-12-25 20:43:55 +0900
+2019-12-25 20:44:09 +0900 :INFO: Started POST "/login" for ::1 at 2019-12-25 20:44:09 +0900
+2019-12-25 20:44:09 +0900 :INFO: Processing by SessionsController#create as HTML
+2019-12-25 20:44:09 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"97CumKKYU/LBZzvsZcxG9z8XlPuLF4NWijugbpqCZw+zg8h/QcVbabL9CdxM+RA0UQoMBk3AaYO/iWKuNulwsw==", "session"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+2019-12-25 20:44:09 +0900 :DEBUG:   [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+2019-12-25 20:44:09 +0900 :DEBUG:   ↳ app/controllers/sessions_controller.rb:7
+2019-12-25 20:44:09 +0900 :INFO: Redirected to http://localhost:3000/
+2019-12-25 20:44:09 +0900 :INFO: Completed 302 Found in 240ms (ActiveRecord: 21.9ms)
+
+
+2019-12-25 20:44:09 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:44:09 +0900
+2019-12-25 20:44:09 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:44:09 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:44:09 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:44:09 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:44:09 +0900 :DEBUG:   [1m[36mEvent Load (5.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:44:09 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:44:09 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (94.3ms)
+2019-12-25 20:44:09 +0900 :INFO: Completed 200 OK in 185ms (Views: 146.3ms | ActiveRecord: 7.8ms)
+
+
+2019-12-25 20:44:09 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274249518" for ::1 at 2019-12-25 20:44:09 +0900
+2019-12-25 20:44:09 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:44:09 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274249518"}
+2019-12-25 20:44:09 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:44:09 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:44:09 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:44:09 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:44:09 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:47:14 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:47:14 +0900
+2019-12-25 20:47:14 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:47:14 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:47:14 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:47:14 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:47:14 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:47:14 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:47:14 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (15.3ms)
+2019-12-25 20:47:15 +0900 :INFO: Completed 200 OK in 744ms (Views: 739.0ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 20:47:15 +0900 :INFO: Started GET "/assets/application.self-545b42b38e85d0a1b4ce3d604cc2825bf8a70043539cc6f84c7e14977b863d20.css?body=1" for ::1 at 2019-12-25 20:47:15 +0900
+2019-12-25 20:47:15 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274435385" for ::1 at 2019-12-25 20:47:15 +0900
+2019-12-25 20:47:15 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:47:15 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274435385"}
+2019-12-25 20:47:15 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:47:15 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:47:15 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:47:15 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:47:15 +0900 :INFO: Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:47:16 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:47:16 +0900
+2019-12-25 20:47:16 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:47:16 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:47:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:47:16 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:47:16 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:47:16 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:47:16 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.9ms)
+2019-12-25 20:47:16 +0900 :INFO: Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 20:47:16 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274436541" for ::1 at 2019-12-25 20:47:16 +0900
+2019-12-25 20:47:16 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:47:16 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274436541"}
+2019-12-25 20:47:16 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:47:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:47:16 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:47:16 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:47:16 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:47:43 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:47:43 +0900
+2019-12-25 20:47:43 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:47:43 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:47:43 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:47:43 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:47:43 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:47:43 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:47:43 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.6ms)
+2019-12-25 20:47:44 +0900 :INFO: Completed 200 OK in 723ms (Views: 718.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:47:44 +0900 :INFO: Started GET "/assets/application.self-54d08caacd542dcd2bb5e5191642df0c4e7a13fae58b2234e7cd4db7b45a4e19.css?body=1" for ::1 at 2019-12-25 20:47:44 +0900
+2019-12-25 20:47:44 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274464123" for ::1 at 2019-12-25 20:47:44 +0900
+2019-12-25 20:47:44 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:47:44 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274464123"}
+2019-12-25 20:47:44 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:47:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:47:44 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:47:44 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:47:44 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:48:09 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:48:09 +0900
+2019-12-25 20:48:09 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:48:09 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:48:09 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:48:09 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:48:09 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:48:09 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:48:09 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.1ms)
+2019-12-25 20:48:10 +0900 :INFO: Completed 200 OK in 710ms (Views: 706.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:48:10 +0900 :INFO: Started GET "/assets/application.self-70a824624173a18b2c27459a700162ee57a395af79ff4414377539d6d60684d8.css?body=1" for ::1 at 2019-12-25 20:48:10 +0900
+2019-12-25 20:48:10 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274490600" for ::1 at 2019-12-25 20:48:10 +0900
+2019-12-25 20:48:10 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:48:10 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274490600"}
+2019-12-25 20:48:10 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:48:10 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:48:10 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:48:10 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:48:10 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:48:31 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:48:31 +0900
+2019-12-25 20:48:31 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:48:31 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:48:31 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:48:31 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:48:31 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:48:31 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:48:31 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (17.2ms)
+2019-12-25 20:48:32 +0900 :INFO: Completed 200 OK in 729ms (Views: 724.7ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 20:48:32 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274512413" for ::1 at 2019-12-25 20:48:32 +0900
+2019-12-25 20:48:32 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:48:32 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274512413"}
+2019-12-25 20:48:32 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:48:32 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:48:32 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:48:32 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:48:32 +0900 :INFO: Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:49:51 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 20:49:51 +0900
+2019-12-25 20:49:51 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:49:51 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:49:51 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:49:51 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:49:51 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:49:51 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:49:51 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (9.5ms)
+2019-12-25 20:49:51 +0900 :INFO: Completed 200 OK in 177ms (Views: 172.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:49:51 +0900 :INFO: Started GET "/assets/application.self-3539619d7f34deb02e81bbdeea1e70070a065f2a656585c635e9888f349af520.js?body=1" for ::1 at 2019-12-25 20:49:51 +0900
+2019-12-25 20:49:52 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274592001" for ::1 at 2019-12-25 20:49:52 +0900
+2019-12-25 20:49:52 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:49:52 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274592001"}
+2019-12-25 20:49:52 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:49:52 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:49:52 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:49:52 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:49:52 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:49:53 +0900 :INFO: Started GET "/events/23" for ::1 at 2019-12-25 20:49:53 +0900
+2019-12-25 20:49:53 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 20:49:53 +0900 :INFO:   Parameters: {"id"=>"23"}
+2019-12-25 20:49:53 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:49:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:49:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:49:53 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 20:49:53 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:49:53 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 20:49:53 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 20:49:53 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (6.3ms)
+2019-12-25 20:49:53 +0900 :INFO: Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:49:55 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:49:55 +0900
+2019-12-25 20:49:55 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:49:55 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:49:55 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:49:55 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:49:55 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:49:55 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:49:55 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.3ms)
+2019-12-25 20:49:55 +0900 :INFO: Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 20:49:55 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274593505" for ::1 at 2019-12-25 20:49:55 +0900
+2019-12-25 20:49:55 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:49:55 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274593505"}
+2019-12-25 20:49:55 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:49:55 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:49:55 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:49:55 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:49:55 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:50:27 +0900 :INFO: Started GET "/events/undefined" for ::1 at 2019-12-25 20:50:27 +0900
+2019-12-25 20:50:27 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 20:50:27 +0900 :INFO:   Parameters: {"id"=>"undefined"}
+2019-12-25 20:50:27 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:50:27 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:50:27 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 0], ["LIMIT", 1]]
+2019-12-25 20:50:27 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 20:50:27 +0900 :INFO: Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:50:27 +0900 :FATAL:   
+2019-12-25 20:50:27 +0900 :FATAL: ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined [WHERE "events"."user_id" = $1]):
+2019-12-25 20:50:27 +0900 :FATAL:   
+2019-12-25 20:50:27 +0900 :FATAL: app/controllers/events_controller.rb:78:in `set_event'
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.2ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (138.6ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-25 20:50:27 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (320.1ms)
+2019-12-25 20:50:49 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274649278" for ::1 at 2019-12-25 20:50:49 +0900
+2019-12-25 20:50:49 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:50:49 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274649278"}
+2019-12-25 20:50:49 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:50:49 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:50:49 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:50:49 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:50:49 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:50:50 +0900 :INFO: Started GET "/events/23" for ::1 at 2019-12-25 20:50:50 +0900
+2019-12-25 20:50:50 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 20:50:50 +0900 :INFO:   Parameters: {"id"=>"23"}
+2019-12-25 20:50:50 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:50:50 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:50:50 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:50:50 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 20:50:50 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:50:50 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 20:50:50 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 20:50:50 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.9ms)
+2019-12-25 20:50:50 +0900 :INFO: Completed 200 OK in 48ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:50:53 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:50:53 +0900
+2019-12-25 20:50:53 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:50:53 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:50:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:50:53 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:50:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:50:53 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:50:53 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.4ms)
+2019-12-25 20:50:53 +0900 :INFO: Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:50:53 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274651011" for ::1 at 2019-12-25 20:50:53 +0900
+2019-12-25 20:50:53 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:50:53 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274651011"}
+2019-12-25 20:50:53 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:50:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:50:53 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:50:53 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:50:53 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:51:22 +0900 :INFO: Started GET "/events/27" for ::1 at 2019-12-25 20:51:22 +0900
+2019-12-25 20:51:22 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 20:51:22 +0900 :INFO:   Parameters: {"id"=>"27"}
+2019-12-25 20:51:22 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:51:22 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:51:22 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 27], ["LIMIT", 1]]
+2019-12-25 20:51:22 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 20:51:22 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 27], ["LIMIT", 1]]
+2019-12-25 20:51:22 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 20:51:22 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 20:51:22 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.9ms)
+2019-12-25 20:51:22 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:51:24 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:51:24 +0900
+2019-12-25 20:51:24 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:51:24 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:51:24 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:51:24 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:51:24 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:51:24 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:51:24 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.0ms)
+2019-12-25 20:51:24 +0900 :INFO: Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:51:24 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274683021" for ::1 at 2019-12-25 20:51:24 +0900
+2019-12-25 20:51:24 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:51:24 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274683021"}
+2019-12-25 20:51:24 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:51:24 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:51:24 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:51:24 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:51:24 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:52:23 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:52:23 +0900
+2019-12-25 20:52:23 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:52:23 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:23 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:23 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:52:23 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (2.1ms)
+2019-12-25 20:52:23 +0900 :INFO: Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:52:23 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274743554" for ::1 at 2019-12-25 20:52:23 +0900
+2019-12-25 20:52:23 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:52:23 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274743554"}
+2019-12-25 20:52:23 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:23 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:23 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:52:23 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:52:23 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:52:30 +0900 :INFO: Started GET "/events/23" for ::1 at 2019-12-25 20:52:30 +0900
+2019-12-25 20:52:30 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 20:52:30 +0900 :INFO:   Parameters: {"id"=>"23"}
+2019-12-25 20:52:30 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:30 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:30 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:52:30 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 20:52:30 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:52:30 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 20:52:30 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 20:52:30 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.5ms)
+2019-12-25 20:52:30 +0900 :INFO: Completed 200 OK in 49ms (Views: 43.2ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 20:52:36 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:52:36 +0900
+2019-12-25 20:52:36 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:52:36 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:36 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:36 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:52:36 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (2.3ms)
+2019-12-25 20:52:36 +0900 :INFO: Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:52:36 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274750304" for ::1 at 2019-12-25 20:52:36 +0900
+2019-12-25 20:52:36 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:52:36 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274750304"}
+2019-12-25 20:52:36 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:36 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:36 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:52:36 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:52:36 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:52:49 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:52:49 +0900
+2019-12-25 20:52:49 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:52:49 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:49 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:49 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:52:49 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (2.2ms)
+2019-12-25 20:52:49 +0900 :INFO: Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:52:49 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274750305" for ::1 at 2019-12-25 20:52:49 +0900
+2019-12-25 20:52:49 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:52:49 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274750305"}
+2019-12-25 20:52:49 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:49 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:49 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:52:49 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:52:49 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:52:51 +0900 :INFO: Started GET "/admin/users" for ::1 at 2019-12-25 20:52:51 +0900
+2019-12-25 20:52:51 +0900 :INFO: Processing by Admin::UsersController#index as HTML
+2019-12-25 20:52:51 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:51 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:51 +0900 :INFO:   Rendering admin/users/index.html.slim within layouts/application
+2019-12-25 20:52:51 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+2019-12-25 20:52:51 +0900 :DEBUG:   ↳ app/views/admin/users/index.html.slim:16
+2019-12-25 20:52:51 +0900 :INFO:   Rendered admin/users/index.html.slim within layouts/application (9.0ms)
+2019-12-25 20:52:51 +0900 :INFO: Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.6ms)
+
+
+2019-12-25 20:52:52 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:52:52 +0900
+2019-12-25 20:52:52 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:52:52 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:52 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:52 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:52:52 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (2.3ms)
+2019-12-25 20:52:52 +0900 :INFO: Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:52:52 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274750306" for ::1 at 2019-12-25 20:52:52 +0900
+2019-12-25 20:52:52 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:52:52 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274750306"}
+2019-12-25 20:52:52 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:52:52 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:52:52 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:52:52 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:52:52 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:53:47 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:53:47 +0900
+2019-12-25 20:53:47 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:53:47 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:53:47 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:53:47 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:53:47 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:53:47 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:53:47 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.3ms)
+2019-12-25 20:53:47 +0900 :INFO: Completed 200 OK in 68ms (Views: 63.6ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:53:47 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274827357" for ::1 at 2019-12-25 20:53:47 +0900
+2019-12-25 20:53:47 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:53:47 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274827357"}
+2019-12-25 20:53:47 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:53:47 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:53:47 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:53:47 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:53:47 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:54:01 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:54:01 +0900
+2019-12-25 20:54:01 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:54:01 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:01 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:01 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:54:01 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:54:01 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:20
+2019-12-25 20:54:01 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (13.1ms)
+2019-12-25 20:54:01 +0900 :INFO: Completed 200 OK in 72ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:54:01 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274841594" for ::1 at 2019-12-25 20:54:01 +0900
+2019-12-25 20:54:01 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:54:01 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274841594"}
+2019-12-25 20:54:01 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:01 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:01 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:54:01 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:54:01 +0900 :INFO: Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:54:18 +0900 :INFO: Started GET "/events/23" for ::1 at 2019-12-25 20:54:18 +0900
+2019-12-25 20:54:18 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 20:54:18 +0900 :INFO:   Parameters: {"id"=>"23"}
+2019-12-25 20:54:18 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:18 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:18 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:54:18 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 20:54:18 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 20:54:18 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 20:54:18 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 20:54:18 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.9ms)
+2019-12-25 20:54:18 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:54:20 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:54:20 +0900
+2019-12-25 20:54:20 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:54:20 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:20 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:20 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:54:21 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:54:21 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:20
+2019-12-25 20:54:21 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.4ms)
+2019-12-25 20:54:21 +0900 :INFO: Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:54:21 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274858926" for ::1 at 2019-12-25 20:54:21 +0900
+2019-12-25 20:54:21 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:54:21 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274858926"}
+2019-12-25 20:54:21 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:21 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:21 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:54:21 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:54:21 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:54:53 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:54:53 +0900
+2019-12-25 20:54:53 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:54:53 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:53 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:54:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:54:53 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:20
+2019-12-25 20:54:53 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.0ms)
+2019-12-25 20:54:53 +0900 :INFO: Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:54:53 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274893675" for ::1 at 2019-12-25 20:54:53 +0900
+2019-12-25 20:54:53 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:54:53 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274893675"}
+2019-12-25 20:54:53 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:54:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:54:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:54:53 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:54:53 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:55:25 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:55:25 +0900
+2019-12-25 20:55:25 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:55:25 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:55:25 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:55:25 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:55:25 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:55:25 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:22
+2019-12-25 20:55:25 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.1ms)
+2019-12-25 20:55:25 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:55:25 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274925643" for ::1 at 2019-12-25 20:55:25 +0900
+2019-12-25 20:55:25 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:55:25 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274925643"}
+2019-12-25 20:55:25 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:55:25 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:55:25 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:55:25 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:55:25 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:55:39 +0900 :INFO: Started GET "/events/new" for ::1 at 2019-12-25 20:55:39 +0900
+2019-12-25 20:55:39 +0900 :INFO: Processing by EventsController#new as HTML
+2019-12-25 20:55:39 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:55:39 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:55:39 +0900 :INFO:   Rendering events/new.html.slim within layouts/application
+2019-12-25 20:55:39 +0900 :INFO:   Rendered events/_form.html.slim (21.6ms)
+2019-12-25 20:55:39 +0900 :INFO:   Rendered events/new.html.slim within layouts/application (27.4ms)
+2019-12-25 20:55:39 +0900 :INFO: Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:55:42 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274925644" for ::1 at 2019-12-25 20:55:42 +0900
+2019-12-25 20:55:42 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:55:42 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274925644"}
+2019-12-25 20:55:42 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:55:42 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:55:42 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:55:42 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:55:42 +0900 :INFO: Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 20:56:16 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:56:16 +0900
+2019-12-25 20:56:16 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:56:16 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:56:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:56:16 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:56:16 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:56:16 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:56:16 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.0ms)
+2019-12-25 20:56:16 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:56:16 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274976344" for ::1 at 2019-12-25 20:56:16 +0900
+2019-12-25 20:56:16 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:56:16 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274976344"}
+2019-12-25 20:56:16 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:56:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:56:16 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:56:16 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:56:16 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:56:36 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:56:36 +0900
+2019-12-25 20:56:36 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:56:36 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:56:36 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:56:36 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:56:36 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:56:36 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:56:36 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.2ms)
+2019-12-25 20:56:36 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:56:36 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577274996180" for ::1 at 2019-12-25 20:56:36 +0900
+2019-12-25 20:56:36 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:56:36 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577274996180"}
+2019-12-25 20:56:36 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:56:36 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:56:36 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:56:36 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:56:36 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:58:46 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:58:46 +0900
+2019-12-25 20:58:46 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:58:46 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:58:46 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:58:46 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:58:46 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:58:46 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:58:46 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (13.8ms)
+2019-12-25 20:58:46 +0900 :INFO: Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:58:46 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275126926" for ::1 at 2019-12-25 20:58:46 +0900
+2019-12-25 20:58:46 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:58:46 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275126926"}
+2019-12-25 20:58:46 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:58:46 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:58:46 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:58:46 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:58:46 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 20:59:22 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:59:22 +0900
+2019-12-25 20:59:22 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:59:22 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:59:22 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:59:22 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:59:22 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:59:22 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:59:22 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.3ms)
+2019-12-25 20:59:22 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:59:22 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275162926" for ::1 at 2019-12-25 20:59:22 +0900
+2019-12-25 20:59:22 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:59:22 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275162926"}
+2019-12-25 20:59:22 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:59:22 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:59:22 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:59:22 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:59:22 +0900 :INFO: Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:59:37 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 20:59:37 +0900
+2019-12-25 20:59:37 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 20:59:37 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:59:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:59:37 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 20:59:37 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:59:37 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 20:59:37 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.3ms)
+2019-12-25 20:59:37 +0900 :INFO: Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 20:59:37 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275177515" for ::1 at 2019-12-25 20:59:37 +0900
+2019-12-25 20:59:37 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 20:59:37 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275177515"}
+2019-12-25 20:59:37 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:59:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:59:37 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 20:59:37 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 20:59:37 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 20:59:46 +0900 :INFO: Started GET "/events/new" for ::1 at 2019-12-25 20:59:46 +0900
+2019-12-25 20:59:46 +0900 :INFO: Processing by EventsController#new as HTML
+2019-12-25 20:59:46 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 20:59:46 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 20:59:46 +0900 :INFO:   Rendering events/new.html.slim within layouts/application
+2019-12-25 20:59:46 +0900 :INFO:   Rendered events/_form.html.slim (7.9ms)
+2019-12-25 20:59:46 +0900 :INFO:   Rendered events/new.html.slim within layouts/application (12.5ms)
+2019-12-25 20:59:46 +0900 :INFO: Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 21:00:20 +0900 :INFO: Started POST "/events" for ::1 at 2019-12-25 21:00:20 +0900
+2019-12-25 21:00:20 +0900 :INFO: Processing by EventsController#create as HTML
+2019-12-25 21:00:20 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"SJx1r0nqKO4yGF2I+RK6qFPaPGfyux24cGrUms7Yhc+Smb2zSEaVCn0GZCTEfp3RDoSUjbOcHUCniI/jdF2x8g==", "event"=>{"name"=>"予約", "description"=>"Aを予約", "start(1i)"=>"2019", "start(2i)"=>"12", "start(3i)"=>"26", "start(4i)"=>"20", "start(5i)"=>"59", "end(1i)"=>"2019", "end(2i)"=>"12", "end(3i)"=>"28", "end(4i)"=>"20", "end(5i)"=>"59"}, "commit"=>"登録する"}
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[36mEvent Create (3.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start", "end", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "予約"], ["description", "Aを予約"], ["start", "2019-12-26 11:59:00"], ["end", "2019-12-28 11:59:00"], ["created_at", "2019-12-25 12:00:20.939708"], ["updated_at", "2019-12-25 12:00:20.939708"], ["user_id", 6]]
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:00:20 +0900 :DEBUG: event: {"id"=>36, "company"=>nil, "name"=>"予約", "description"=>"Aを予約", "start"=>Thu, 26 Dec 2019 20:59:00 JST +09:00, "end"=>Sat, 28 Dec 2019 20:59:00 JST +09:00, "created_at"=>Wed, 25 Dec 2019 21:00:20 JST +09:00, "updated_at"=>Wed, 25 Dec 2019 21:00:20 JST +09:00, "user_id"=>6}
+2019-12-25 21:00:20 +0900 :INFO: Redirected to http://localhost:3000/events/36
+2019-12-25 21:00:20 +0900 :INFO: Completed 302 Found in 11ms (ActiveRecord: 5.5ms)
+
+
+2019-12-25 21:00:20 +0900 :INFO: Started GET "/events/36" for ::1 at 2019-12-25 21:00:20 +0900
+2019-12-25 21:00:20 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:00:20 +0900 :INFO:   Parameters: {"id"=>"36"}
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:00:20 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:00:20 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:00:20 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:00:20 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (6.2ms)
+2019-12-25 21:00:21 +0900 :INFO: Completed 200 OK in 50ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:00:24 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:00:24 +0900
+2019-12-25 21:00:24 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:00:24 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:24 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:24 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:00:24 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:00:24 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:00:24 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.1ms)
+2019-12-25 21:00:24 +0900 :INFO: Completed 200 OK in 54ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:00:24 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275221024" for ::1 at 2019-12-25 21:00:24 +0900
+2019-12-25 21:00:24 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:00:24 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275221024"}
+2019-12-25 21:00:24 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:24 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:24 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:00:24 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:00:24 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 21:00:28 +0900 :INFO: Started GET "/events/36" for ::1 at 2019-12-25 21:00:28 +0900
+2019-12-25 21:00:28 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:00:28 +0900 :INFO:   Parameters: {"id"=>"36"}
+2019-12-25 21:00:28 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:28 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:28 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:00:28 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:00:28 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:00:28 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:00:28 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:00:28 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.9ms)
+2019-12-25 21:00:28 +0900 :INFO: Completed 200 OK in 48ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:00:33 +0900 :INFO: Started GET "/events/36/edit" for ::1 at 2019-12-25 21:00:33 +0900
+2019-12-25 21:00:33 +0900 :INFO: Processing by EventsController#edit as HTML
+2019-12-25 21:00:33 +0900 :INFO:   Parameters: {"id"=>"36"}
+2019-12-25 21:00:33 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:33 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:33 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:00:33 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:00:33 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:00:33 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:29
+2019-12-25 21:00:33 +0900 :INFO:   Rendering events/edit.html.slim within layouts/application
+2019-12-25 21:00:33 +0900 :INFO:   Rendered events/_form.html.slim (8.1ms)
+2019-12-25 21:00:33 +0900 :INFO:   Rendered events/edit.html.slim within layouts/application (13.0ms)
+2019-12-25 21:00:33 +0900 :INFO: Completed 200 OK in 62ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:00:34 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:00:34 +0900
+2019-12-25 21:00:34 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:00:34 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:34 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:34 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:00:34 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:00:34 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:00:34 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (9.0ms)
+2019-12-25 21:00:35 +0900 :INFO: Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:00:35 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275228406" for ::1 at 2019-12-25 21:00:35 +0900
+2019-12-25 21:00:35 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:00:35 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275228406"}
+2019-12-25 21:00:35 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:00:35 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:00:35 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:00:35 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:00:35 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:04:32 +0900 :INFO: Started GET "/events/undefined" for ::1 at 2019-12-25 21:04:32 +0900
+2019-12-25 21:04:32 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:04:32 +0900 :INFO:   Parameters: {"id"=>"undefined"}
+2019-12-25 21:04:32 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:04:32 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:04:32 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 0], ["LIMIT", 1]]
+2019-12-25 21:04:32 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:04:32 +0900 :INFO: Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:04:32 +0900 :FATAL:   
+2019-12-25 21:04:32 +0900 :FATAL: ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined [WHERE "events"."user_id" = $1]):
+2019-12-25 21:04:32 +0900 :FATAL:   
+2019-12-25 21:04:32 +0900 :FATAL: app/controllers/events_controller.rb:78:in `set_event'
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.3ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (124.9ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-25 21:04:32 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (283.9ms)
+2019-12-25 21:05:26 +0900 :INFO: Started GET "/" for ::1 at 2019-12-25 21:05:26 +0900
+2019-12-25 21:05:26 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:05:26 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:05:26 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:05:26 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:05:26 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:05:26 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:05:26 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (10.5ms)
+2019-12-25 21:05:26 +0900 :INFO: Completed 200 OK in 80ms (Views: 75.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:05:29 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275529667" for ::1 at 2019-12-25 21:05:29 +0900
+2019-12-25 21:05:29 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:05:29 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275529667"}
+2019-12-25 21:05:29 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:05:29 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:05:29 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:05:29 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:05:29 +0900 :INFO: Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:05:42 +0900 :INFO: Started GET "/events/undefined" for ::1 at 2019-12-25 21:05:42 +0900
+2019-12-25 21:05:42 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:05:42 +0900 :INFO:   Parameters: {"id"=>"undefined"}
+2019-12-25 21:05:42 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:05:42 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:05:42 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 0], ["LIMIT", 1]]
+2019-12-25 21:05:42 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:05:42 +0900 :INFO: Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:05:42 +0900 :FATAL:   
+2019-12-25 21:05:42 +0900 :FATAL: ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined [WHERE "events"."user_id" = $1]):
+2019-12-25 21:05:42 +0900 :FATAL:   
+2019-12-25 21:05:42 +0900 :FATAL: app/controllers/events_controller.rb:78:in `set_event'
+2019-12-25 21:05:42 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-25 21:05:42 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-25 21:05:42 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+2019-12-25 21:05:42 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-25 21:05:42 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+2019-12-25 21:05:42 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-25 21:05:42 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+2019-12-25 21:05:42 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.8ms)
+2019-12-25 21:05:42 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-25 21:05:43 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (125.8ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-25 21:05:43 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (283.9ms)
+2019-12-25 21:07:51 +0900 :INFO: Started GET "/events/undefined" for ::1 at 2019-12-25 21:07:51 +0900
+2019-12-25 21:07:51 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:07:51 +0900 :INFO:   Parameters: {"id"=>"undefined"}
+2019-12-25 21:07:51 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:07:51 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:07:51 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 0], ["LIMIT", 1]]
+2019-12-25 21:07:51 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:07:51 +0900 :INFO: Completed 404 Not Found in 19ms (ActiveRecord: 4.7ms)
+
+
+2019-12-25 21:07:51 +0900 :FATAL:   
+2019-12-25 21:07:51 +0900 :FATAL: ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined [WHERE "events"."user_id" = $1]):
+2019-12-25 21:07:51 +0900 :FATAL:   
+2019-12-25 21:07:51 +0900 :FATAL: app/controllers/events_controller.rb:19:in `show'
+2019-12-25 21:07:51 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-25 21:07:51 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-25 21:07:51 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+2019-12-25 21:07:51 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-25 21:07:51 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+2019-12-25 21:07:51 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-25 21:07:51 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+2019-12-25 21:07:51 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.3ms)
+2019-12-25 21:07:51 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-25 21:07:52 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (125.3ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-25 21:07:52 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (282.9ms)
+2019-12-25 21:08:03 +0900 :INFO: Started GET "/events/undefined" for ::1 at 2019-12-25 21:08:03 +0900
+2019-12-25 21:08:03 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:08:03 +0900 :INFO:   Parameters: {"id"=>"undefined"}
+2019-12-25 21:08:03 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:08:03 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:08:03 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 0], ["LIMIT", 1]]
+2019-12-25 21:08:03 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:08:03 +0900 :INFO: Completed 404 Not Found in 18ms (ActiveRecord: 4.9ms)
+
+
+2019-12-25 21:08:03 +0900 :FATAL:   
+2019-12-25 21:08:03 +0900 :FATAL: ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined [WHERE "events"."user_id" = $1]):
+2019-12-25 21:08:03 +0900 :FATAL:   
+2019-12-25 21:08:03 +0900 :FATAL: app/controllers/events_controller.rb:78:in `set_event'
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.1ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (125.0ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendering /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2019-12-25 21:08:04 +0900 :INFO:   Rendered /Users/kain/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (283.1ms)
+2019-12-25 21:08:14 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275694837" for ::1 at 2019-12-25 21:08:14 +0900
+2019-12-25 21:08:14 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:08:14 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275694837"}
+2019-12-25 21:08:14 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:08:14 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:08:14 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:08:14 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:08:14 +0900 :INFO: Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:08:17 +0900 :INFO: Started GET "/events/36" for ::1 at 2019-12-25 21:08:17 +0900
+2019-12-25 21:08:17 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:08:17 +0900 :INFO:   Parameters: {"id"=>"36"}
+2019-12-25 21:08:17 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:08:17 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:08:17 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:08:17 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:08:17 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 36], ["LIMIT", 1]]
+2019-12-25 21:08:17 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:08:17 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:08:17 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (6.4ms)
+2019-12-25 21:08:17 +0900 :INFO: Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:09:19 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:09:19 +0900
+2019-12-25 21:09:19 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:09:19 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:19 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:19 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:09:19 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:09:19 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:09:19 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.4ms)
+2019-12-25 21:09:19 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:09:19 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275697860" for ::1 at 2019-12-25 21:09:19 +0900
+2019-12-25 21:09:19 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:09:19 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275697860"}
+2019-12-25 21:09:19 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:19 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:19 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:09:19 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:09:19 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:09:36 +0900 :INFO: Started GET "/events/new" for ::1 at 2019-12-25 21:09:36 +0900
+2019-12-25 21:09:36 +0900 :INFO: Processing by EventsController#new as HTML
+2019-12-25 21:09:36 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:36 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:36 +0900 :INFO:   Rendering events/new.html.slim within layouts/application
+2019-12-25 21:09:36 +0900 :INFO:   Rendered events/_form.html.slim (8.5ms)
+2019-12-25 21:09:36 +0900 :INFO:   Rendered events/new.html.slim within layouts/application (13.2ms)
+2019-12-25 21:09:36 +0900 :INFO: Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:09:44 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:09:44 +0900
+2019-12-25 21:09:44 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:09:44 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:44 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:09:44 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:09:44 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:09:44 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.4ms)
+2019-12-25 21:09:44 +0900 :INFO: Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:09:44 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275697861" for ::1 at 2019-12-25 21:09:44 +0900
+2019-12-25 21:09:44 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:09:44 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275697861"}
+2019-12-25 21:09:44 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:44 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:09:44 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:09:44 +0900 :INFO: Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:09:46 +0900 :INFO: Started GET "/events/26" for ::1 at 2019-12-25 21:09:46 +0900
+2019-12-25 21:09:46 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:09:46 +0900 :INFO:   Parameters: {"id"=>"26"}
+2019-12-25 21:09:46 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:46 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:46 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 26], ["LIMIT", 1]]
+2019-12-25 21:09:46 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:09:46 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 26], ["LIMIT", 1]]
+2019-12-25 21:09:46 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:09:46 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:09:46 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.4ms)
+2019-12-25 21:09:46 +0900 :INFO: Completed 200 OK in 44ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:09:48 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:09:48 +0900
+2019-12-25 21:09:48 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:09:48 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:48 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:48 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:09:48 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:09:48 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:09:48 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.4ms)
+2019-12-25 21:09:48 +0900 :INFO: Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:09:48 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577275786813" for ::1 at 2019-12-25 21:09:48 +0900
+2019-12-25 21:09:48 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:09:48 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577275786813"}
+2019-12-25 21:09:48 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:09:48 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:09:48 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:09:48 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:09:48 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:15:37 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:15:37 +0900
+2019-12-25 21:15:37 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:15:37 +0900 :DEBUG:   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:37 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:15:37 +0900 :DEBUG:   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:15:37 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:15:37 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (9.3ms)
+2019-12-25 21:15:37 +0900 :INFO: Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 2.3ms)
+
+
+2019-12-25 21:15:37 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276137609" for ::1 at 2019-12-25 21:15:37 +0900
+2019-12-25 21:15:37 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:15:37 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276137609"}
+2019-12-25 21:15:37 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:37 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:15:37 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:15:37 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:15:39 +0900 :INFO: Started GET "/events/25" for ::1 at 2019-12-25 21:15:39 +0900
+2019-12-25 21:15:39 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:15:39 +0900 :INFO:   Parameters: {"id"=>"25"}
+2019-12-25 21:15:39 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:39 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:39 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 25], ["LIMIT", 1]]
+2019-12-25 21:15:39 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:15:39 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 25], ["LIMIT", 1]]
+2019-12-25 21:15:39 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:15:39 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:15:39 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.4ms)
+2019-12-25 21:15:39 +0900 :INFO: Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:15:44 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:15:44 +0900
+2019-12-25 21:15:44 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:15:44 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:44 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:15:44 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:15:44 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:15:44 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.8ms)
+2019-12-25 21:15:44 +0900 :INFO: Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:15:44 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276139727" for ::1 at 2019-12-25 21:15:44 +0900
+2019-12-25 21:15:44 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:15:44 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276139727"}
+2019-12-25 21:15:44 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:44 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:15:44 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:15:44 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:15:46 +0900 :INFO: Started GET "/events/new" for ::1 at 2019-12-25 21:15:46 +0900
+2019-12-25 21:15:46 +0900 :INFO: Processing by EventsController#new as HTML
+2019-12-25 21:15:46 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:46 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:46 +0900 :INFO:   Rendering events/new.html.slim within layouts/application
+2019-12-25 21:15:46 +0900 :INFO:   Rendered events/_form.html.slim (8.2ms)
+2019-12-25 21:15:46 +0900 :INFO:   Rendered events/new.html.slim within layouts/application (13.4ms)
+2019-12-25 21:15:46 +0900 :INFO: Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:15:55 +0900 :INFO: Started POST "/events" for ::1 at 2019-12-25 21:15:55 +0900
+2019-12-25 21:15:55 +0900 :INFO: Processing by EventsController#create as HTML
+2019-12-25 21:15:55 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mk++cqc2mbmPqMtnLIrXUqTFOVXOtLAo9D0bgL0yUrjoSnZuppokXcC28ssR5vAr+ZuRv4+TsNAj30D5B7dmhQ==", "event"=>{"name"=>"亜dfdっsだ", "description"=>"dsファsdファ", "start(1i)"=>"2019", "start(2i)"=>"12", "start(3i)"=>"25", "start(4i)"=>"21", "start(5i)"=>"15", "end(1i)"=>"2019", "end(2i)"=>"12", "end(3i)"=>"25", "end(4i)"=>"23", "end(5i)"=>"15"}, "commit"=>"登録する"}
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start", "end", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "亜dfdっsだ"], ["description", "dsファsdファ"], ["start", "2019-12-25 12:15:00"], ["end", "2019-12-25 14:15:00"], ["created_at", "2019-12-25 12:15:55.677168"], ["updated_at", "2019-12-25 12:15:55.677168"], ["user_id", 6]]
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:15:55 +0900 :DEBUG: event: {"id"=>37, "company"=>nil, "name"=>"亜dfdっsだ", "description"=>"dsファsdファ", "start"=>Wed, 25 Dec 2019 21:15:00 JST +09:00, "end"=>Wed, 25 Dec 2019 23:15:00 JST +09:00, "created_at"=>Wed, 25 Dec 2019 21:15:55 JST +09:00, "updated_at"=>Wed, 25 Dec 2019 21:15:55 JST +09:00, "user_id"=>6}
+2019-12-25 21:15:55 +0900 :INFO: Redirected to http://localhost:3000/events/37
+2019-12-25 21:15:55 +0900 :INFO: Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+2019-12-25 21:15:55 +0900 :INFO: Started GET "/events/37" for ::1 at 2019-12-25 21:15:55 +0900
+2019-12-25 21:15:55 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:15:55 +0900 :INFO:   Parameters: {"id"=>"37"}
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 37], ["LIMIT", 1]]
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:15:55 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 37], ["LIMIT", 1]]
+2019-12-25 21:15:55 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:15:55 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:15:55 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.4ms)
+2019-12-25 21:15:55 +0900 :INFO: Completed 200 OK in 56ms (Views: 50.9ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:15:58 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:15:58 +0900
+2019-12-25 21:15:58 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:15:58 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:58 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:58 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:15:58 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:15:58 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:15:58 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.9ms)
+2019-12-25 21:15:58 +0900 :INFO: Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:15:58 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276155765" for ::1 at 2019-12-25 21:15:58 +0900
+2019-12-25 21:15:58 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:15:58 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276155765"}
+2019-12-25 21:15:58 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:15:58 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:15:58 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:15:58 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:15:58 +0900 :INFO: Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:16:02 +0900 :INFO: Started GET "/events/37" for ::1 at 2019-12-25 21:16:02 +0900
+2019-12-25 21:16:02 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:16:02 +0900 :INFO:   Parameters: {"id"=>"37"}
+2019-12-25 21:16:02 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:16:02 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:16:02 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 37], ["LIMIT", 1]]
+2019-12-25 21:16:02 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:16:02 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 37], ["LIMIT", 1]]
+2019-12-25 21:16:02 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:16:02 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:16:02 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (6.1ms)
+2019-12-25 21:16:02 +0900 :INFO: Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:17:52 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:17:52 +0900
+2019-12-25 21:17:53 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:17:53 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:17:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:17:53 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:17:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:17:53 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:17:53 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.5ms)
+2019-12-25 21:17:53 +0900 :INFO: Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:17:53 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276162127" for ::1 at 2019-12-25 21:17:53 +0900
+2019-12-25 21:17:53 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:17:53 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276162127"}
+2019-12-25 21:17:53 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:17:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:17:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:17:53 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:17:53 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:17:54 +0900 :INFO: Started GET "/events/25" for ::1 at 2019-12-25 21:17:54 +0900
+2019-12-25 21:17:54 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:17:54 +0900 :INFO:   Parameters: {"id"=>"25"}
+2019-12-25 21:17:54 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:17:54 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:17:54 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 25], ["LIMIT", 1]]
+2019-12-25 21:17:54 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:17:54 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 25], ["LIMIT", 1]]
+2019-12-25 21:17:54 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:17:54 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:17:54 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.3ms)
+2019-12-25 21:17:54 +0900 :INFO: Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:17:56 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:17:56 +0900
+2019-12-25 21:17:56 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:17:56 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:17:56 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:17:56 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:17:56 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:17:56 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:17:56 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (9.4ms)
+2019-12-25 21:17:56 +0900 :INFO: Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:17:56 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276274579" for ::1 at 2019-12-25 21:17:56 +0900
+2019-12-25 21:17:56 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:17:56 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276274579"}
+2019-12-25 21:17:56 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:17:56 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:17:56 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:17:56 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:17:56 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 21:18:28 +0900 :INFO: Started GET "/events/26" for ::1 at 2019-12-25 21:18:28 +0900
+2019-12-25 21:18:28 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:18:28 +0900 :INFO:   Parameters: {"id"=>"26"}
+2019-12-25 21:18:28 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:18:28 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:18:28 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 26], ["LIMIT", 1]]
+2019-12-25 21:18:28 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:18:28 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 26], ["LIMIT", 1]]
+2019-12-25 21:18:28 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:18:28 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:18:28 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.9ms)
+2019-12-25 21:18:28 +0900 :INFO: Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:18:30 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:18:30 +0900
+2019-12-25 21:18:30 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:18:30 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:18:30 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:18:30 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:18:30 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:18:30 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:18:30 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.7ms)
+2019-12-25 21:18:30 +0900 :INFO: Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:18:30 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276308333" for ::1 at 2019-12-25 21:18:30 +0900
+2019-12-25 21:18:30 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:18:30 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276308333"}
+2019-12-25 21:18:30 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:18:30 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:18:30 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:18:30 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:18:30 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 21:19:44 +0900 :INFO: Started GET "/events/37" for ::1 at 2019-12-25 21:19:44 +0900
+2019-12-25 21:19:44 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:19:44 +0900 :INFO:   Parameters: {"id"=>"37"}
+2019-12-25 21:19:44 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:19:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:19:44 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 37], ["LIMIT", 1]]
+2019-12-25 21:19:44 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:19:44 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 37], ["LIMIT", 1]]
+2019-12-25 21:19:44 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:19:44 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:19:44 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.5ms)
+2019-12-25 21:19:44 +0900 :INFO: Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:19:48 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:19:48 +0900
+2019-12-25 21:19:48 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:19:48 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:19:48 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:19:48 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:19:48 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:19:48 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:19:48 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (16.5ms)
+2019-12-25 21:19:48 +0900 :INFO: Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:19:48 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276385015" for ::1 at 2019-12-25 21:19:48 +0900
+2019-12-25 21:19:48 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:19:48 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276385015"}
+2019-12-25 21:19:48 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:19:48 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:19:48 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:19:48 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:19:48 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:25:42 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:25:42 +0900
+2019-12-25 21:25:42 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:25:42 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:42 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:42 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:25:42 +0900 :DEBUG:   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:25:42 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:25:42 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.5ms)
+2019-12-25 21:25:43 +0900 :INFO: Completed 200 OK in 167ms (Views: 162.5ms | ActiveRecord: 1.0ms)
+
+
+2019-12-25 21:25:43 +0900 :INFO: Started GET "/assets/application.self-e0791e5ba8683e257b200916352e82f73eaef06a9a8f9facafef0bf8ca7d2ce9.js?body=1" for ::1 at 2019-12-25 21:25:43 +0900
+2019-12-25 21:25:43 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276743119" for ::1 at 2019-12-25 21:25:43 +0900
+2019-12-25 21:25:43 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:25:43 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276743119"}
+2019-12-25 21:25:43 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:43 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:43 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:25:43 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:25:43 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:25:49 +0900 :INFO: Started GET "/events/23" for ::1 at 2019-12-25 21:25:49 +0900
+2019-12-25 21:25:49 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:25:49 +0900 :INFO:   Parameters: {"id"=>"23"}
+2019-12-25 21:25:49 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:49 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:49 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 21:25:49 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:25:49 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 23], ["LIMIT", 1]]
+2019-12-25 21:25:49 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:25:49 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:25:49 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.3ms)
+2019-12-25 21:25:49 +0900 :INFO: Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:25:53 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:25:53 +0900
+2019-12-25 21:25:53 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:25:53 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:53 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:25:53 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:25:53 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:25:53 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.7ms)
+2019-12-25 21:25:53 +0900 :INFO: Completed 200 OK in 56ms (Views: 51.3ms | ActiveRecord: 0.6ms)
+
+
+2019-12-25 21:25:53 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276750003" for ::1 at 2019-12-25 21:25:53 +0900
+2019-12-25 21:25:53 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:25:53 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276750003"}
+2019-12-25 21:25:53 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:53 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:25:53 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:25:53 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:25:54 +0900 :INFO: Started GET "/events/26" for ::1 at 2019-12-25 21:25:54 +0900
+2019-12-25 21:25:54 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:25:54 +0900 :INFO:   Parameters: {"id"=>"26"}
+2019-12-25 21:25:54 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:54 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:54 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 26], ["LIMIT", 1]]
+2019-12-25 21:25:54 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:25:54 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 26], ["LIMIT", 1]]
+2019-12-25 21:25:54 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:25:54 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:25:54 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.6ms)
+2019-12-25 21:25:54 +0900 :INFO: Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:25:56 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:25:56 +0900
+2019-12-25 21:25:56 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:25:56 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:56 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:56 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:25:56 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:25:56 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:25:56 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.7ms)
+2019-12-25 21:25:56 +0900 :INFO: Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+2019-12-25 21:25:56 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276754966" for ::1 at 2019-12-25 21:25:56 +0900
+2019-12-25 21:25:56 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:25:56 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276754966"}
+2019-12-25 21:25:56 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:56 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:56 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:25:56 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:25:56 +0900 :INFO: Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:25:59 +0900 :INFO: Started GET "/events/new" for ::1 at 2019-12-25 21:25:59 +0900
+2019-12-25 21:25:59 +0900 :INFO: Processing by EventsController#new as HTML
+2019-12-25 21:25:59 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:25:59 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:25:59 +0900 :INFO:   Rendering events/new.html.slim within layouts/application
+2019-12-25 21:25:59 +0900 :INFO:   Rendered events/_form.html.slim (8.4ms)
+2019-12-25 21:25:59 +0900 :INFO:   Rendered events/new.html.slim within layouts/application (13.2ms)
+2019-12-25 21:25:59 +0900 :INFO: Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+2019-12-25 21:26:07 +0900 :INFO: Started POST "/events" for ::1 at 2019-12-25 21:26:07 +0900
+2019-12-25 21:26:07 +0900 :INFO: Processing by EventsController#create as HTML
+2019-12-25 21:26:07 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"FKCJ9O0V8+TWlr5Smzf1crABj9/Cgxa7Ra0uqar02IPOpUHo7LlOAJmIh/6mW9IL7V8nNYOkFkOST3XQEHHsvg==", "event"=>{"name"=>"亜dsfsだfsだファ", "description"=>"dsfさdf", "start(1i)"=>"2019", "start(2i)"=>"12", "start(3i)"=>"25", "start(4i)"=>"21", "start(5i)"=>"25", "end(1i)"=>"2019", "end(2i)"=>"12", "end(3i)"=>"29", "end(4i)"=>"21", "end(5i)"=>"25"}, "commit"=>"登録する"}
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start", "end", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "亜dsfsだfsだファ"], ["description", "dsfさdf"], ["start", "2019-12-25 12:25:00"], ["end", "2019-12-29 12:25:00"], ["created_at", "2019-12-25 12:26:07.773440"], ["updated_at", "2019-12-25 12:26:07.773440"], ["user_id", 6]]
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:38
+2019-12-25 21:26:07 +0900 :DEBUG: event: {"id"=>38, "company"=>nil, "name"=>"亜dsfsだfsだファ", "description"=>"dsfさdf", "start"=>Wed, 25 Dec 2019 21:25:00 JST +09:00, "end"=>Sun, 29 Dec 2019 21:25:00 JST +09:00, "created_at"=>Wed, 25 Dec 2019 21:26:07 JST +09:00, "updated_at"=>Wed, 25 Dec 2019 21:26:07 JST +09:00, "user_id"=>6}
+2019-12-25 21:26:07 +0900 :INFO: Redirected to http://localhost:3000/events/38
+2019-12-25 21:26:07 +0900 :INFO: Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+2019-12-25 21:26:07 +0900 :INFO: Started GET "/events/38" for ::1 at 2019-12-25 21:26:07 +0900
+2019-12-25 21:26:07 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:26:07 +0900 :INFO:   Parameters: {"id"=>"38"}
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 38], ["LIMIT", 1]]
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:26:07 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 38], ["LIMIT", 1]]
+2019-12-25 21:26:07 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:26:07 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:26:07 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.1ms)
+2019-12-25 21:26:07 +0900 :INFO: Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:26:10 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:26:10 +0900
+2019-12-25 21:26:10 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:26:10 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:10 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:10 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:26:10 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:26:10 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:26:10 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (9.2ms)
+2019-12-25 21:26:10 +0900 :INFO: Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:26:10 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276767859" for ::1 at 2019-12-25 21:26:10 +0900
+2019-12-25 21:26:10 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:26:10 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276767859"}
+2019-12-25 21:26:10 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:10 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:10 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:26:10 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:26:10 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:26:16 +0900 :INFO: Started GET "/events/38" for ::1 at 2019-12-25 21:26:16 +0900
+2019-12-25 21:26:16 +0900 :INFO: Processing by EventsController#show as HTML
+2019-12-25 21:26:16 +0900 :INFO:   Parameters: {"id"=>"38"}
+2019-12-25 21:26:16 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:16 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 38], ["LIMIT", 1]]
+2019-12-25 21:26:16 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:78
+2019-12-25 21:26:16 +0900 :DEBUG:   [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."user_id" = $1 AND "events"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 38], ["LIMIT", 1]]
+2019-12-25 21:26:16 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:19
+2019-12-25 21:26:16 +0900 :INFO:   Rendering events/show.html.slim within layouts/application
+2019-12-25 21:26:16 +0900 :INFO:   Rendered events/show.html.slim within layouts/application (5.4ms)
+2019-12-25 21:26:16 +0900 :INFO: Completed 200 OK in 49ms (Views: 43.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:26:19 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:26:19 +0900
+2019-12-25 21:26:19 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:26:19 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:19 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:19 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:26:19 +0900 :DEBUG:   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:26:19 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:26:19 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.7ms)
+2019-12-25 21:26:19 +0900 :INFO: Completed 200 OK in 52ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:26:19 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276776446" for ::1 at 2019-12-25 21:26:19 +0900
+2019-12-25 21:26:19 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:26:19 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276776446"}
+2019-12-25 21:26:19 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:19 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:19 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:26:19 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:26:19 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:26:23 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:26:23 +0900
+2019-12-25 21:26:23 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:26:23 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:23 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:23 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:26:23 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:26:23 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:26:23 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (8.6ms)
+2019-12-25 21:26:23 +0900 :INFO: Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:26:23 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276776447" for ::1 at 2019-12-25 21:26:23 +0900
+2019-12-25 21:26:23 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:26:23 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276776447"}
+2019-12-25 21:26:23 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:26:23 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:26:23 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:26:23 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:26:23 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+2019-12-25 21:27:43 +0900 :INFO: Started GET "/events" for ::1 at 2019-12-25 21:27:43 +0900
+2019-12-25 21:27:43 +0900 :INFO: Processing by EventsController#index as HTML
+2019-12-25 21:27:43 +0900 :DEBUG:   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:27:43 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:27:43 +0900 :INFO:   Rendering events/index.html.slim within layouts/application
+2019-12-25 21:27:43 +0900 :DEBUG:   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:27:43 +0900 :DEBUG:   ↳ app/views/events/index.html.slim:18
+2019-12-25 21:27:43 +0900 :INFO:   Rendered events/index.html.slim within layouts/application (7.9ms)
+2019-12-25 21:27:44 +0900 :INFO: Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+2019-12-25 21:27:44 +0900 :INFO: Started GET "/events.json?start=2019-12-01&end=2020-01-12&_=1577276864036" for ::1 at 2019-12-25 21:27:44 +0900
+2019-12-25 21:27:44 +0900 :INFO: Processing by EventsController#index as JSON
+2019-12-25 21:27:44 +0900 :INFO:   Parameters: {"start"=>"2019-12-01", "end"=>"2020-01-12", "_"=>"1577276864036"}
+2019-12-25 21:27:44 +0900 :DEBUG:   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+2019-12-25 21:27:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2019-12-25 21:27:44 +0900 :DEBUG:   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1 ORDER BY "events"."created_at" DESC[0m  [["user_id", 6]]
+2019-12-25 21:27:44 +0900 :DEBUG:   ↳ app/controllers/events_controller.rb:12
+2019-12-25 21:27:44 +0900 :INFO: Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+

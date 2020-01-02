@@ -1,0 +1,31 @@
+.nav.justify-content-start
+  = link_to '新規登録', new_event_path, class: 'btn btn-outline-primary'
+.nav.justify-content-end
+  = link_to '一覧', events_path, class: 'nav-link btn btn-outline-secondary mr-3'
+#calendar
+
+.md-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      
+      th= Event.human_attribute_name(:name)
+      th= Event.human_attribute_name(:description)
+      th= Event.human_attribute_name(:start)
+      th= Event.human_attribute_name(:end)
+      th 
+  tbody
+    - @events.each do |event|
+      tr
+        
+        td= event.name
+        td= event.description
+        td= event.start
+        td= event.end
+        td
+          = link_to '詳細', event_path(event), class: 'btn btn-sm btn-outline-primary mr-1'
+          = link_to '編集', edit_event_path(event), class: 'btn btn-sm btn-outline-primary mr-1'
+          = link_to '削除', event, method: :delete, data: { confirm: "タイトル「#{event.name}」を削除します。よろしいですか？" }, class: 'btn btn-sm btn-danger mr-1'
+br
+
+
